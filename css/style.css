@@ -16,9 +16,8 @@ body {
 }
 
 .card {
-  border: 1px solid red;
   background: hsl(0, 0%, 100%);
-  width: 700px;
+  width: 720px;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -35,8 +34,7 @@ body {
 }
 .card .card-content {
   flex: 1;
-  border: 1px solid blue;
-  padding: 30px;
+  padding: 35px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,14 +51,14 @@ body {
 .card .card-content .card-title {
   font-family: "Fraunces", serif;
   font-size: 2.4rem;
-  line-height: 2rem;
+  line-height: 2.4rem;
   font-weight: bold;
 }
 .card .card-content .card-text {
   font-family: "Montserrat", sans-serif;
   color: hsl(228, 12%, 48%);
-  font-size: 1.1rem;
-  line-height: 1.8rem;
+  font-size: 1rem;
+  line-height: 1.6rem;
 }
 .card .card-content .card-price {
   display: flex;
@@ -73,13 +71,77 @@ body {
   font-size: 2.6rem;
 }
 .card .card-content .card-price .old-price {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
 }
 .card .card-content .card-btn {
-  padding: 1rem;
+  padding: 1.1rem;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
   background-color: hsl(158, 36%, 37%);
   color: hsl(0, 0%, 100%);
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.card .card-content .card-btn:hover {
+  background-color: hsl(158, 36%, 25%);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 620px;
+    width: 350px;
+    flex-direction: column;
+  }
+  .card .card-img {
+    height: 40%;
+    width: 100%;
+  }
+  .card .card-img img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .card .card-content {
+    padding: 25px 28px;
+  }
+  .card .card-content .perfume {
+    font-size: 0.8rem;
+  }
+  .card .card-content .card-title {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+  }
+  .card .card-content .card-text {
+    line-height: 1.4rem;
+    font-size: 14px;
+  }
+  .card .card-content .card-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .card .card-content .card-price .current-price {
+    font-size: 1.9rem;
+  }
+  .card .card-content .card-price .old-price {
+    font-size: 1rem;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+  }
+  .card .card-content .card-btn {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */

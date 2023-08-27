@@ -21,9 +21,8 @@ body{
 
 
 .card{
-    border: 1px solid red;
     background: $color-white;
-    width: 700px;
+    width: 720px;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -42,8 +41,7 @@ body{
 
     .card-content{
         flex: 1;
-        border: 1px solid blue;
-        padding: 30px;
+        padding: 35px 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -61,16 +59,16 @@ body{
         .card-title{
             font-family: $font-fraunces;
             font-size: 2.4rem;
-            line-height: 2rem;
+            line-height: 2.4rem;
             font-weight: bold;
-            
         }
 
         .card-text{
             font-family: $font-montserrat;
             color: $color-dark-grayish-blue;
-            font-size: 1.1rem;
-            line-height: 1.8rem;
+            font-size: 1rem;
+            line-height: 1.6rem;
+            
         }
 
         .card-price{
@@ -85,17 +83,94 @@ body{
             }
 
             .old-price{
+                font-family: $font-montserrat;
+                font-weight: 400;
                 color: $color-dark-grayish-blue;
+                text-decoration: line-through;
             }
         }
 
         .card-btn{
-            padding: 1rem;
+            padding: 1.1rem;
             border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
             background-color: $color-dark-cyan;
             color: $color-white;
             font-family: $font-montserrat;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            
+            &:hover{
+                background-color: $color-very-dark-cyan;
+            }
         }
     }
 }
+
+@media screen and (max-width:768px)
+{
+    .card{
+        height: 620px;
+        width: 350px;
+        flex-direction: column;
+
+        .card-img{
+            height: 40%;
+            width: 100%;
+            
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        
+        .card-content{
+
+            padding: 25px 28px;
+
+            .perfume{
+                font-size: 0.8rem;
+            }
+
+            .card-title{
+                font-family: $font-fraunces;
+                font-size: 2rem;
+                line-height: 2rem;
+                font-weight: bold;
+            }
+
+            .card-text{
+                line-height: 1.4rem;
+                font-size: 14px;
+            }
+
+            .card-price{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+    
+                .current-price{
+                    font-size: 1.9rem;
+                }
+    
+                .old-price{
+                    font-size: 1rem;
+                    color: $color-dark-grayish-blue;
+                    text-decoration: line-through;
+                }
+            }
+
+            .card-btn{
+                font-size: 0.85rem;
+                padding: 1rem;
+            }
+        }
+        }
+    }
