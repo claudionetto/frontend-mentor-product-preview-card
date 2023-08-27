@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border: 1px solid red;
+  background: hsl(0, 0%, 100%);
+  width: 700px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.card .card-img {
+  width: 50%;
+}
+.card .card-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .card-content {
+  flex: 1;
+  border: 1px solid blue;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+}
+.card .card-content .perfume {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-weight: 100;
+  font-size: 0.9rem;
+  letter-spacing: 0.25rem;
+}
+.card .card-content .card-title {
+  font-family: "Fraunces", serif;
+  font-size: 2.4rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+.card .card-content .card-text {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+.card .card-content .card-price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.card .card-content .card-price .current-price {
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 2.6rem;
+}
+.card .card-content .card-price .old-price {
+  color: hsl(228, 12%, 48%);
+}
+.card .card-content .card-btn {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}/*# sourceMappingURL=style.css.map */
